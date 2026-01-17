@@ -31,8 +31,8 @@ develop a modern data warehouse using SQL server to consolidate sales, enabling 
  
     These insights empower stakeholders with key business metrics, enabling strategic decision-making.
 
-    -----
+    ----
 
     ## About Me
 
-   Hi there! I'm **ABDELLAH JAMAI, and I'm a data analyst and a student in the English field. I'm passionate about learning data in an enjoyable and engaging way.
+   Hi there! I'm **ABDELLAH JAMAI**, and I'm a data analyst and a student in the English field. I'm passionate about learning data in an enjoyable and engaging way.
