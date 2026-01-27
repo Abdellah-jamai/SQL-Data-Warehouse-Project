@@ -1,0 +1,81 @@
+
+/*
+===================================================================================================================
+Quality checks
+===================================================================================================================
+Script Purpose:
+       This script performs various quality checks far data consistency, accuracy, and standardization across the 
+       'Silver' schema. It includes checks for:
+       - Null or duplicate primary keys.
+       - Unwanted spaces in string fields.
+       - Data standardization and consistency.
+       - Invalid date ranges and orders.
+       - Data consistency between related fields.
+
+Usage Notes:
+       - Run these checks after data loading silver layer.
+       - Invistegate and resolve any discrepancies found during the checks.
+===================================================================================================================
+*/
+
+-- check for nulls or duplicates in primary key
+-- expectation: no result
+
+select 
+prd_id,
+count (*)
+from Silver.crm_prd_info
+group by prd_id
+having count (*) > 1 or prd_id is null
+
+-- check for unwanted spaces
+-- expectation: no results
+
+select prd_nm
+from Silver.crm_prd_info
+where prd_nm != trim(prd_nm)
+
+-- data standardization & consistency
+
+select distinct product_line 
+from Silver.crm_prd_info
+
+-- check for Nulls or negative numbers
+-- expectation: No results
+
+select product_cost
+from Silver.crm_prd_info
+where product_cost < 0 or product_cost is null
+
+-- Check for invalid date orders
+
+select *
+from Silver.crm_prd_info
+where product_end_date < product_start_date
+
+-- Check for invalid dates
+
+select *
+from Bronze.crm_prd_info
+where prd_end_dt < prd_start_dt
+
+-- Check data consistency: between sales, quantity, and price
+-->> price = quantity * price
+-->> values must not be null, zero, or negative
+
+select distinct
+     sls_sales,
+     sls_quantity,
+     sls_price
+from Bronze.crm_sales_details
+where sls_sales != sls_quantity * sls_price
+      or sls_sales is null or sls_quantity is null or sls_price is null
+      or sls_sales <= 0 or sls_quantity <= 0 or sls_price <= 0
+order by sls_sales,
+
+-- Identify out-of-range dates --
+
+select distinct
+     bdate
+from Bronze.erp_cust_az12
+where bdate < '1924-01-01' or bdate > getdate()
