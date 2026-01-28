@@ -114,7 +114,7 @@ BEGIN
    truncate table Bronze.erp_px_cat_glv2;
 
 bulk insert Bronze.erp_px_cat_glv2
-from 'C:\Users\AbdeLlah\OneDrive\Bureau\erp\source_erp\px_cat_glv2.csv'
+from 'C:\Users\AbdeLlah\OneDrive\Bureau\temp\px_cat_glv2.csv'
 with (
     firstrow = 2,
     fieldterminator = ',',
