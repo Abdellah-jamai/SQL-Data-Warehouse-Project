@@ -90,8 +90,42 @@ The data architecture for this project follows medalion **Bronze**, **Silver**, 
 
 
 
-    ----
+
+1. **Bronze Layer:** Stores raw data as-is from the source sysrems. Data is ingested from CSV files into SQL server database.
+
+2. **Silver Layer:** This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+
+3. **Gold Layer:** Houses business-ready data modeled into a star schema required for reporting and analytics.
+
+ ----
+
+## Repository Structure
+
+data-warehouse-project/
+├── datasets/                        # Raw datasets used for the project (ERP and CRM data)
+
+├── docs/                            # Project documentation and architecture details
+│   ├── ETL.drawio                   # Draw.io file shows all different techniques and methods of ETL
+│   ├── Data_architecture.drawio     # Draw.io file shows the project's architecture
+│   ├── Data_catalog.md              # Catalog of datasets, including field descriptions and metadata
+│   ├── Data_flow.drawio             # Draw.io file for the data flow diagram
+│   ├── Data_models.drawio           # Draw.io file for data models (star schema)
+│   └── Naming-conventions.md        # Consistent naming guidelines for tables, columns, and files
+
+├── scripts/                         # SQL scripts for ETL and transformations
+│   ├── Bronze/                      # Scripts for extracting and loading raw data
+│   ├── Silver/                      # Scripts for cleaning and transforming data
+│   └── Gold/                        # Scripts for creating analytical models
+
+├── tests/                           # Test scripts and quality files
+├── README.md                        # Project overview and instructions
+├── .gitignore                       # Files and directories to be ignored by Git
+└── requirements.txt                 # Dependencies and requirements for the project
+
+---
 
    ## About Me
 
    Hi there! I'm **ABDELLAH JAMAI**, and I'm a data analyst and a student in the English field. I'm passionate about learning data in an enjoyable and engaging way.
+
+   
