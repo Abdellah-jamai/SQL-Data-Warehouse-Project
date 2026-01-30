@@ -8,24 +8,24 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 ## Project Overview
 ### This project involves:
 
-   1. *Data Architecture:* Designing a modern data warehouse using medalion architecture *Bronze*, *Silver*, and *Gold*                layers
+   1. *Data Architecture:* Designing a modern data warehouse using medalion architecture **Bronze**, **Silver**, and **Gold**                layers
    2. **ETL Pipelines:** Extracting, transforming, and loading data from source systems into the warehouse.
    3. **Data Modeling:** Developing fact and dimension tables optimized for analytical queries.
    4. **Analytics & Reporting:** Creating SQL-based reports and dashboards for actionable insights.
 
 This repository is an excellent resource for professionals and students looking to showcase expertise in:
 
-• **SQL Development
+• **SQL Development**
 
-• **Data Architect
+• **Data Architect**
 
-• **Data Engineering
+• **Data Engineering**
 
-• **ETL Pipeline
+• **ETL Pipeline**
 
-• **Data Modeling
+• **Data Modeling**
 
-• **Data Analytics
+• **Data Analytics**
 
 ---
 
@@ -57,6 +57,41 @@ develop a modern data warehouse using SQL server to consolidate sales, enabling 
 
     ----
 
-    ## About Me
+### Data Architecture
+
+The data architecture for this project follows medalion **Bronze**, **Silver**, and **Gold** layers:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img width="414" height="441" alt="draw io 4" src="https://github.com/user-attachments/assets/c8a7b982-afec-4384-b8e3-02f1d2a2cb4a" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ----
+
+   ## About Me
 
    Hi there! I'm **ABDELLAH JAMAI**, and I'm a data analyst and a student in the English field. I'm passionate about learning data in an enjoyable and engaging way.
