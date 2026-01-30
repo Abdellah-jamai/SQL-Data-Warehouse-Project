@@ -16,10 +16,15 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 This repository is an excellent resource for professionals and students looking to showcase expertise in:
 
 • SQL Development
+
 • Data Architect
+
 • Data Engineering
+
 • ETL Pipeline
+
 • Data Modeling
+
 • Data Analytics
 
 ---
