@@ -103,9 +103,24 @@ The data architecture for this project follows medalion **Bronze**, **Silver**, 
 
 data-warehouse-project/
 
-<img width="1536" height="1024" alt="a clean, professiona" src="https://github.com/user-attachments/assets/04b6eeb4-ca64-4655-93d6-bc2ae23604e2" />
-
-
+| Path                          | Type   | Description                                                             |
+|------------------------------|--------|-------------------------------------------------------------------------|
+| `datasets/`                  | Folder | Raw datasets used for the project (ERP and CRM data)                   |
+| `docs/`                      | Folder | Project documentation and architecture details                         |
+| ├── `ETL.drawio`             | File   | Shows different techniques and methods of ETL                          |
+| ├── `Data_architecture.drawio` | File | Shows the project's architecture                                       |
+| ├── `Data_catalog.md`        | File   | Catalog of datasets with field descriptions and metadata               |
+| ├── `Data_flow.drawio`       | File   | Data flow diagram                                                      |
+| ├── `Data_models.drawio`     | File   | Data models (star schema)                                              |
+| └── `Naming-conventions.md`  | File   | Naming guidelines for tables, columns, and files                       |
+| `scripts/`                   | Folder | SQL scripts for ETL and transformations                                |
+| ├── `Bronze/`                | Folder | Extracting and loading raw data                                        |
+| ├── `Silver/`                | Folder | Cleaning and transforming data                                         |
+| └── `Gold/`                  | Folder | Creating analytical models                                             |
+| `tests/`                     | Folder | Test scripts and quality files                                         |
+| `README.md`                  | File   | Project overview and instructions                                      |
+| `.gitignore`                 | File   | Files and directories to be ignored by Git                             |
+| `requirements.txt`           | File   | Dependencies and requirements for the project                          |
 
 
 
