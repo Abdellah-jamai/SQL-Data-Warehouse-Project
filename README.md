@@ -103,37 +103,11 @@ The data architecture for this project follows medalion **Bronze**, **Silver**, 
 
 data-warehouse-project/
 
-├── datasets/                        # Raw datasets used for the project (ERP and CRM data)|
+<img width="1536" height="1024" alt="a clean, professiona" src="https://github.com/user-attachments/assets/04b6eeb4-ca64-4655-93d6-bc2ae23604e2" />
 
-├── docs/                            # Project documentation and architecture details|
 
-│   ├── ETL.drawio                   # Draw.io file shows all different techniques and methods of ETL|
 
-│   ├── Data_architecture.drawio     # Draw.io file shows the project's architecture|
 
-│   ├── Data_catalog.md              # Catalog of datasets, including field descriptions and metadata|
-
-│   ├── Data_flow.drawio             # Draw.io file for the data flow diagram|
-
-│   ├── Data_models.drawio           # Draw.io file for data models (star schema)|
-
-│   └── Naming-conventions.md        # Consistent naming guidelines for tables, columns, and files|
-
-├── scripts/                         # SQL scripts for ETL and transformations|
-
-│   ├── Bronze/                      # Scripts for extracting and loading raw data|
-
-│   ├── Silver/                      # Scripts for cleaning and transforming data|
-
-│   └── Gold/                        # Scripts for creating analytical models|
-
-├── tests/                           # Test scripts and quality files|
-
-├── README.md                        # Project overview and instructions|
-
-├── .gitignore                       # Files and directories to be ignored by Git|
-
-└── requirements.txt                 # Dependencies and requirements for the project|
 
 ---
 
