@@ -84,13 +84,11 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 **.** All primary keys in dimension tables must use the suffix _key.
 
- <table_name>_key
-
- <table_name>: Refers to the name of the table or entity the key belongs to.
- 
- key: A suffix indicating that this column is a surrogate key.
- 
- Example: customer_key → Surrogate key in the dim_customers table.
+| Pattern          | Meaning                                                                 | Example                          |
+|------------------|-------------------------------------------------------------------------|----------------------------------|
+| `<table_name>_key` | Column naming convention where the suffix `_key` indicates a surrogate key | customer_key → Surrogate key in the dim_customers table |
+| `<table_name>`   | Refers to the name of the table or entity the key belongs to             | customer                         |
+| `key`            | Suffix showing that the column is a surrogate key                        | key                              |
 
 ### Technical Columns
 
@@ -98,13 +96,11 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 **.** All technical columns must start with the prefix dwh_, followed by a descriptive name indicating the column's purpose.
 
- dwh_<column_name>
-
- data_warehouse: Prefix exclusively for system-generated metadata.
- 
- <column_name>: Descriptive name indicating the column's purpose.
- 
- Example: dwh_load_date → System-generated column used to store the date when the record was loaded.
+| Pattern            | Meaning                                                                 | Example                          |
+|--------------------|-------------------------------------------------------------------------|----------------------------------|
+| `dwh_<column_name>` | Prefix used exclusively for system-generated metadata columns              | dwh_load_date → System-generated column used to store the date when the record was loaded |
+| `dwh`              | Indicates the data warehouse prefix for metadata                         | dwh                              |
+| `<column_name>`    | Descriptive name indicating the column's purpose                          | load_date                        |
  
 ## Stored Procedure
 
@@ -112,12 +108,7 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 **.** All stored procedures used for loading data must follow the naming pattern:
 
-load_<layer>.
-
-<layer>: Represents the layer being loaded, such as bronze, silver, or gold.
- 
-Example:
- 
- **.load_bronze** → Stored procedure for loading data into the Bronze layer.
- 
- **.load_silver** → Stored procedure for loading data into the Silver layer.
+| Pattern        | Meaning                                                        | Example(s)                                                   |
+|----------------|----------------------------------------------------------------|--------------------------------------------------------------|
+| `load_<layer>` | Naming convention for stored procedures that load data into a specific layer | .load_bronze → Stored procedure for loading data into the Bronze layer<br>.load_silver → Stored procedure for loading data into the Silver layer |
+| `<layer>`      | Represents the layer being loaded (e.g., bronze, silver, gold) | bronze, silver, gold                                         |
