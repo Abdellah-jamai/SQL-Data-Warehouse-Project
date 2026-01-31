@@ -52,29 +52,21 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 **.** All names must start with the source system name, and table names must match their original names without renaming.
 
- <sourcesystem>_<entity>
-
- <sourcesystem>: Name of the source system (e.g., crm, erp).
- 
- <entity>: Exact table name from the source system.
- 
- Example: crm_customer_info → Customer information from the CRM system.
+| Pattern               | Meaning                                                                 | Example                          |
+|-----------------------|-------------------------------------------------------------------------|----------------------------------|
+| `<sourcesystem>_<entity>` | Combination of source system name and exact table name from that system | crm_customer_info → Customer information from the CRM system |
+| `<sourcesystem>`      | Name of the source system (e.g., crm, erp)                              | crm                              |
+| `<entity>`            | Exact table name from the source system                                 | customer_info                    |
 
 ### Gold Rules
 
 **.** All names must use meaningful, business-aligned names for tables, starting with the category prefix.
 
- <category>_<entity>
-
- <category>: Describes the role of the table, such as dim (dimension) or fact (fact table).
- 
- <entity>: Descriptive name of the table, aligned with the business domain (e.g., customers, products, sales).
- 
- Examples:
- 
-**dim_customers** → Dimension table for customer data.
-
-**fact_sales** → Fact table containing sales transactions.
+| Pattern            | Meaning                                                                 | Example(s)                                      |
+|--------------------|-------------------------------------------------------------------------|------------------------------------------------|
+| `<category>_<entity>` | Combination of table role and descriptive business domain name            | dim_customers → Dimension table for customer data<br>fact_sales → Fact table containing sales transactions |
+| `<category>`       | Describes the role of the table (e.g., dim for dimension, fact for fact) | dim, fact                                      |
+| `<entity>`         | Descriptive name of the table, aligned with the business domain          | customers, products, sales                     |
 
 ### Glossary of Category Patterns
 
