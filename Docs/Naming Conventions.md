@@ -42,13 +42,11 @@ This document outlines the naming conventions used for schemas, tables, views, c
 
 **.** All names must start with the source system name, and table names must match their original names without renaming.
 
- <sourcesystem>_<entity>
-
- <sourcesystem>: Name of the source system (e.g., crm, erp).
- 
- <entity>: Exact table name from the source system.
- 
- Example: crm_customer_info → Customer information from the CRM system.
+| Pattern               | Meaning                                                                 | Example                          |
+|-----------------------|-------------------------------------------------------------------------|----------------------------------|
+| `<sourcesystem>_<entity>` | Combination of source system name and exact table name from that system | crm_customer_info → Customer information from the CRM system |
+| `<sourcesystem>`      | Name of the source system (e.g., crm, erp)                              | crm                              |
+| `<entity>`            | Exact table name from the source system                                 | customer_info                    |
 
 ### Silver Rules
 
